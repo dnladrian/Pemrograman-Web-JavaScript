@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Kurs Rupiah</title>
+    <Script>
+
+    </Script>
+</head>
+<body>
+    <input type="text" placeholder="Masukan Nilai" id="nilai">
+    <select name="" id="pilihan">
+        <option value="us">Dolar US</option>
+        <option value="singapur">Dolar Singapur</option>
+        <option value="malay">Ringgit Malaysia</option>
+        <option value="jepang">Yen Jepang</option>
+        <option value="euro">Euro</option>
+        <option value="riyal">Riyal Arab Saudi</option>
+    </select>
+    <input type="hasil" placeholder="Nilai Rupiah" id="hasil">
+    <input type="button" value="hitung" onclick="valas()">
+
+    <script>
+        function valas(){
+            let nilai = document.getElementById('nilai').value;
+            let pilihan = document.getElementById('pilihan').value;
+            let bilhasil = nilai * pilihan;
+            console.log(pilihan);
+            
+            document.getElementById("hasil").innerHTML = bilhasil;
+
+            if (pilihan == "us") {
+                console.log(nilai * 9915);
+            }if (pilihan == "singapur") {
+                console.log(nilai * 13472);
+            }if (pilihan == "malay") {
+                console.log(nilai * 874);
+            }if (pilihan == "jepang") {
+                console.log(nilai * 120);
+            }if (pilihan == "euro") {
+                console.log(nilai * 15888);
+            }if (pilihan == "riyal") {
+                console.log(nilai * 3592);
+            }else
+                console.log("Silahkan Masukan Nilai ")
+
+            let hasil = document.getElementById('hasil').value
+                   
+        }
+    </script>
+</body>
+</html>
